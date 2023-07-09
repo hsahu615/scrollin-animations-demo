@@ -1,0 +1,82 @@
+.scroll-tracker {
+    position: fixed;
+    inset: 0 0 auto;
+    height: 0.4rem;
+    background-color: #269E69;
+    transform-origin: left;
+}
+
+
+body {
+    background: #1D212B;
+}
+
+section {
+    min-height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section:nth-child(odd){
+    color: white;
+}
+section:nth-child(even){
+    color: #1D212B;
+    background-color: white;
+}
+
+section .container {
+    margin: 100px;
+}
+
+section h1 {
+    font-size: 60px;
+}
+
+section h2 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards {
+    display: flex;
+}
+
+section .cards .text-card {
+    background-color: #269E69;
+    margin: 20px;
+    padding: 20px;
+}
+
+section .cards .text-card h3 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.reveal {
+    position: relative;
+    transform: translateX(100vw);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.reveal.remove {
+    transform: translateX(100vw);
+    opacity: 0;
+}
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
